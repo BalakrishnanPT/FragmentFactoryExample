@@ -10,11 +10,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         mFragmentFactory = new SampleFragmentFactory();
         getSupportFragmentManager().setFragmentFactory(mFragmentFactory);
+        super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_main);
         // Usual method to replace fragment
         getSupportFragmentManager()
                 .beginTransaction()
